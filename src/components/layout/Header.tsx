@@ -1,26 +1,52 @@
 // src/components/layout/Header.tsx
 import React from 'react';
+import { useState, useEffect } from 'react';
 import '../../styles/App.css';
 
 const Header: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    useEffect(() => {
+        const mobileNav = document.querySelector('.list-mobile-nav') as HTMLElement;
+        if (mobileNav) {
+            mobileNav.style.display = menuOpen ? 'block' : 'none';
+        }
+    }, [menuOpen]);
+
     return (
         <header>
             <div className="container">
                 <nav className="nav">
                     {/* Mobile Navigation */}
-                    <ul className="nav-list nav-list-mobile">
-                        <li className="nav-item">
-                            <div className="mobile-menu">
-                                <span className="line line-top"></span>
-                                <span className="line line-bottom"></span>
+                    <ul className={`nav-list nav-list-mobile ${menuOpen ? 'active' : ''}`}>
+                        <li className="nav-mobile">
+                            <div className="mobile-menu" onClick={toggleMenu}>
+                                <span className={`line line-top ${menuOpen ? 'active' : ''}`}></span>
+                                <span className={`line line-middle ${menuOpen ? 'active' : ''}`}></span>
+                                <span className={`line line-bottom ${menuOpen ? 'active' : ''}`}></span>
                             </div>
                         </li>
-                        <li className="nav-item">
-                            {/* <Link to="/" className="nav-link nav-link-apple"></Link> */}
-                        </li>
-                        <li className="nav-item">
-                            <a href="#" className="nav-link nav-link-bag"></a>
-                        </li>
+                        <div className="list-mobile-nav">
+                            <li className="nav-link-item">
+                                <a href="/" className="nav-link-small ">Home</a>
+                            </li>
+                            <li className=" nav-link-item">
+                                <a href="/about" className="nav-link-small ">About Us</a>
+                            </li>
+                            <li className=" nav-link-item">
+                                <a href="/products" className="nav-link-small ">Products</a>
+                            </li>
+                            <li className=" nav-link-item">
+                                <a href="/team" className="nav-link-small ">Our Team</a>
+                            </li>
+                            <li className=" nav-link-item">
+                                <a href="/contact" className="nav-link-small nav-link-contact">Contact Us</a>
+                            </li>
+                        </div>
                     </ul>
 
                     {/* Larger Screens Navigation */}

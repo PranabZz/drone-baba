@@ -4,7 +4,7 @@ import Button from '../common/Buttons';
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="hero product h-screen flex items-center justify-center relative"
+      className="hero product"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
