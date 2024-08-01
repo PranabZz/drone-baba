@@ -6,7 +6,6 @@ const HeroSection: React.FC = () => {
     <section
       className="hero product h-screen flex items-center justify-center relative"
       style={{
-        backgroundImage: 'url(public/images/bg_1.jpg)', // Replace with the path to your DJI photo
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -105,9 +105,10 @@ header {
     /* background-color: rgba(0, 0, 0, 0.8); */
     /* backdrop-filter: blur(2rem); */
     /* transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1), */
-        /* height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1); */
-        
+    /* height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1); */
+
 }
+
 .nav-list {
     position: relative;
     list-style: none;
@@ -161,7 +162,7 @@ header {
     width: 1.4rem;
 }
 
-.product{
+.product {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,7 +172,7 @@ header {
 
 /* Center the .title within the parent container */
 .title {
-   
+
     color: var(--font-color-light);
     text-align: center;
     padding-top: 5.5rem;
@@ -245,6 +246,7 @@ header {
 /* Hero Section */
 .hero {
     height: var(--hero-height-large);
+    background-image: url('/images/bg_1.jpg');
     background-size: auto 73.6rem;
     background-position: center;
     background-repeat: no-repeat;
