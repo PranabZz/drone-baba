@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:1.4
-
 # Use an official Node.js image as the base image
 FROM node:18 AS builder
 
