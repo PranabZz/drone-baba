@@ -20,7 +20,7 @@ const Aboutus: React.FC = () => {
                         muted
                         autoFocus
                     >
-                        Your browser does not support the video tag.
+                        This browser does not support the video tag.
                     </video>
                     <p className="image-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum sunt, beatae delectus doloribus laboriosam repudiandae nobis neque ipsam voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, ea.</p>
                 </div>
@@ -35,7 +35,7 @@ const Aboutus: React.FC = () => {
                         muted
                         autoFocus
                     >
-                        Your browser does not support the video tag.
+                        This browser does not support the video tag.
                     </video>
                 </div>
             </section>
