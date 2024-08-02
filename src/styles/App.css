@@ -8,6 +8,7 @@
     --light-color: #fff;
     --primary-color: #0070c9;
     --hover-color: #003a6a;
+    --section-max-width : 130rem;
     --max-width: 98rem;
     --padding-global: 2.2rem;
     --header-height: 4.4rem;
@@ -45,6 +46,12 @@ a {
 
 .container {
     max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-global);
+}
+
+.section-container {
+    max-width: var(--section-max-width);
     margin: 0 auto;
     padding: 0 var(--padding-global);
 }
@@ -262,6 +269,82 @@ header {
 .list-mobile-nav {
     display: none;
 }
+
+/* Footer.css */
+.footer {
+    background-color: var(--light-color);
+    color: var(--font-color-dark);
+    text-align: left;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    margin: 50px 50px 0 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-list{
+    font-size: 2rem;
+    color: var(--font-color-dark);
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.footer-column h3 {
+    margin-top: 0;
+    font-size: var(--font-heading-small);
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--font-color-dark);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 1068px) {
