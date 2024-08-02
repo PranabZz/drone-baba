@@ -11,19 +11,29 @@ const Aboutus: React.FC = () => {
             <section className="about-section">
                 <div className="about-image">
                     <h1 className="section-title">How our drones fly better.</h1><br></br>
-                    <img
-                        src="https://via.placeholder.com/1200X1800" // Replace with your long image URL
-                        alt="About Us"
-                        className="about-img"
-                    />
+                    <video
+
+                        className="about-vid"
+                        src="/public/videos/video_2.mp4"
+                        autoPlay={true}
+                        loop
+                        muted
+                        autoFocus
+                    >
+                        Your browser does not support the video tag.
+                    </video>
                     <p className="image-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum sunt, beatae delectus doloribus laboriosam repudiandae nobis neque ipsam voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, ea.</p>
                 </div>
                 <div className="about-video">
                     <h1 className="section-sub-title">Checkout some of the videos, here are some amazing isn't it?</h1><br></br>
                     <video
-                        controls
+
                         className="about-vid"
-                        src="https://www.w3schools.com/html/mov_bbb.mp4" // Replace with your video URL
+                        src="/public/videos/video_1.mp4"
+                        autoPlay={true}
+                        loop
+                        muted
+                        autoFocus
                     >
                         Your browser does not support the video tag.
                     </video>
