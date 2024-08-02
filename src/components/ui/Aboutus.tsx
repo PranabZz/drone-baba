@@ -14,7 +14,7 @@ const Aboutus: React.FC = () => {
                     <video
 
                         className="about-vid"
-                        src="/public/videos/video_2.mp4"
+                        src="/videos/video_2.mp4"
                         autoPlay={true}
                         loop
                         muted
@@ -29,7 +29,7 @@ const Aboutus: React.FC = () => {
                     <video
 
                         className="about-vid"
-                        src="/public/videos/video_1.mp4"
+                        src="/videos/video_1.mp4"
                         autoPlay={true}
                         loop
                         muted
