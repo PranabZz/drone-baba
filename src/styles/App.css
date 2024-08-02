@@ -8,7 +8,7 @@
     --light-color: #fff;
     --primary-color: #0070c9;
     --hover-color: #003a6a;
-    --section-max-width : 130rem;
+    --section-max-width: 130rem;
     --max-width: 98rem;
     --padding-global: 2.2rem;
     --header-height: 4.4rem;
@@ -109,6 +109,7 @@ a {
 header {
     position: fixed;
     width: 100%;
+    z-index: 9999;
     /* background-color: rgba(0, 0, 0, 0.8); */
     /* backdrop-filter: blur(2rem); */
     /* transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1), */
@@ -269,6 +270,60 @@ header {
 .list-mobile-nav {
     display: none;
 }
+.title-heading-product {
+    font-size: var(--font-heading-large);
+    margin: 30px auto; 
+    padding: 0; 
+    text-align: center; 
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    height: 600px;
+    /* Adjust based on your image height */
+    margin: 0 auto;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
 
 /* Footer.css */
 .footer {
@@ -292,7 +347,7 @@ header {
     margin: 0 auto;
 }
 
-.footer-list{
+.footer-list {
     font-size: 2rem;
     color: var(--font-color-dark);
 }
@@ -568,22 +623,22 @@ header {
     }
 }
 
-.light-text{
+.light-text {
     color: var(--font-color-gray);
 }
 
-.about-description{
+.about-description {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: var(--font-heading-small);
-    
+
 }
 
-.section-title{
+.section-title {
     font-size: var(--font-heading-large);
 }
 
-.section-sub-title{
+.section-sub-title {
     font-size: var(--font-heading-medium);
 }
 
@@ -614,7 +669,7 @@ header {
     border-radius: 8px;
 }
 
-.image-desc{
+.image-desc {
     font-size: 1.8rem;
     justify-content: end;
 }

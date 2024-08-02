@@ -4,6 +4,7 @@ import HeroSection from '../ui/Herosection'; // Adjust the path as needed
 import Header from '../layout/Header';
 import Aboutus from '../ui/Aboutus';
 import Footer from '../layout/Footer';
+import Product from '../ui/Products';
 
 const Home: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
             <Header />
             <HeroSection />
             <Aboutus/>  
+            <Product/>
             <Footer/>
         </div>
     );
