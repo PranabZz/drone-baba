@@ -100,7 +100,7 @@ a {
 
 /* Header */
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     /* background-color: rgba(0, 0, 0, 0.8); */
     /* backdrop-filter: blur(2rem); */
@@ -119,7 +119,7 @@ header {
     top: 10px;
     width: 100%;
     z-index: 1400;
-    color: #fff;
+    color: var(--dark-color);
     /* margin: 40px auto; */
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -127,6 +127,7 @@ header {
     border-radius: 15px;
     padding: 1.2rem;
     backdrop-filter: blur(10px);
+    font-weight: 300;
 }
 
 .nav-list-mobile {
@@ -135,7 +136,7 @@ header {
 
 .nav-link {
     font-size: 1.4rem;
-    color: var(--font-color-light);
+    color: var(--font-color-dark);
     padding: 0 1rem;
     transition: opacity 0.5s;
 }
@@ -258,9 +259,10 @@ header {
     border-top: none;
 }
 
-.list-mobile-nav{
+.list-mobile-nav {
     display: none;
 }
+
 /* Responsive Design */
 @media screen and (max-width: 1068px) {
     .hero {
@@ -302,11 +304,11 @@ header {
         top: 0;
         margin-top: 0;
     }
-  
+
     .nav-list-mobile {
         display: block;
     }
-    
+
     .nav-item {
         width: 4.8rem;
         height: 4.8rem;
@@ -334,13 +336,13 @@ header {
     .line {
         position: absolute;
         width: 1.7rem;
-        height: 1px;
+        height: 0.5px;
         background-color: var(--font-color-light);
         transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     }
 
     .line-top {
-        margin-top: 3px;
+        margin-top: 0.3rem;
     }
 
     .line-bottom {
@@ -480,6 +482,69 @@ header {
 
     .cta-link {
         font-size: 1.9rem;
+    }
+}
+
+.light-text{
+    color: var(--font-color-gray);
+}
+
+.about-description{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: var(--font-heading-small);
+    
+}
+
+.section-title{
+    font-size: var(--font-heading-large);
+}
+
+.section-sub-title{
+    font-size: var(--font-heading-medium);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.about-image,
+.about-video {
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-vid {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-desc{
+    font-size: 1.8rem;
+    justify-content: end;
+}
+
+@media (min-width: 768px) {
+    .about-section {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .about-image,
+    .about-video {
+        width: 50%;
     }
 }
 
